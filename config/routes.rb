@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'home', to: 'application#home'
+  root  to: 'application#home'
 end
