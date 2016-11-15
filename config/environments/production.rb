@@ -77,7 +77,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host: 'fumi.herokuapp.com',:protocol =>'https'}
+  config.action_mailer.default_url_options = { host: 'glamor.herokuapp.com',:protocol =>'https'}
   # confirmation mail set up
 ActionMailer::Base.smtp_settings = {
     :address              =>  'smtp.sendgrid.net',

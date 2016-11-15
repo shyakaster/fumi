@@ -123,6 +123,10 @@ a.btn-secondary:focus,
   -moz-box-shadow: none;
   box-shadow: none;
 }
+
+.hidden{
+  display: none;
+}
 .honey_pot{
   display: none;
 }
@@ -513,7 +517,7 @@ h1.logo img {
 .bottombar {
   background: #193819;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 40px;
   color: rgba(255, 255, 255, 0.4);
 }
 .bottombar a {

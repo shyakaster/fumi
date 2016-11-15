@@ -16,18 +16,18 @@
     <link rel="shortcut icon" href="favicon.ico">  
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->   
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/custom-icons/style.css">
-    <link rel="stylesheet" href="assets/plugins/animate-css/animate.min.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/plugins/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="assets/plugins/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/plugins/custom-icons/style.css">
+    <link rel="stylesheet" href="/assets/plugins/animate-css/animate.min.css">
+    <link rel="stylesheet" href="/assets/plugins/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/plugins/owl-carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/plugins/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="/assets/plugins/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
     
     <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles-2.css">
+    <link id="theme-style" rel="stylesheet" href="/assets/css/styles-2.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -39,7 +39,9 @@
 <body data-spy="scroll">     
 	<%= render partial: 'layouts/header'%>
 	<%= yield %>
+    <%= render partial: 'layouts/footer'%>
+    <%= render partial: 'layouts/rights'%>
+    <%= render partial: 'layouts/scripts'%>
  </body>
 </html> 
 
-<%= render partial: 'layouts/scripts'%>

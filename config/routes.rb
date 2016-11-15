@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   
-  root  to: 'contacts#home'
-  post '/' => 'contacts#create'
+  root  to: 'application#home'
 
-  get '/thanks' => 'contacts#thanks'
+ resources :contacts, only: [:new, :create]
 end

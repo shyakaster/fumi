@@ -1,28 +1,17 @@
 class ContactsController < ApplicationController
+    def new
+    @contact = Contact.new
+    end
 
-  def home
-     @message=ContactForm.new
-  end
-  def new
-     @message=ContactForm.new
-  end
+    def create
+      @contact = Contact.new(params[:contact])
+      @contact.request = request
+      if @contact.deliver
+        flash.now[:error]=nil
+      else
+        flash.now[:error]="Cannot send message for some reason"
+        render :new
+      end
+    end
 
-  def create
-  	@message = ContactForm.new(contact_params)
-    # @message.request=request
-     if @message.valid?
-      AdminNotifier.contact_form(@message).deliver_now
-        @message.save
-  	     return redirect_to thanks_path, notice: "Thanks for the message"
-       else
-        redirect_to thanks_path, notice: "Message was not delivered for some reason"
-       end
-  end
-
-  def thanks
-  end
-  private
-  def contact_params
-  	params.require(:contact_form).permit(:name,:email, :message, :telephone)
-  end
 end
